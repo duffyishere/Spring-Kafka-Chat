@@ -1,7 +1,9 @@
 package org.duffy.springinitializr.domain.auth;
 
 import lombok.RequiredArgsConstructor;
+import org.duffy.springinitializr.domain.account.Account;
 import org.duffy.springinitializr.domain.account.AccountRepository;
+import org.duffy.springinitializr.domain.account.dto.LoginResponseDto;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -10,9 +12,16 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthenticationService {
     private final AccountRepository accountRepository;
-    private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
-    private final AuthenticationManager authenticationManager;
 
-
+    public LoginResponseDto  refreshToken(String refreshToken) {
+        Account account = accountRepository.findByEmail(jwtService.extractUsername(refreshToken)).orElseThrow(() -> new IllegalArgumentException("Invalid refresh token."));
+        if (jwtService.isTokenValid(refreshToken, account)) {
+            String jwt = jwtService.generateToken(account);
+            return new LoginResponseDto(jwt, refreshToken);
+        }
+        else {
+            throw new IllegalArgumentException("Expired refresh token.");
+        }
+    }
 }
