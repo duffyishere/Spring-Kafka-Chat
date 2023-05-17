@@ -26,15 +26,15 @@ public class AccountService {
     }
 
     public LoginResponseDto login(LoginRequestDto data) {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        data.getEmail(),
-                        data.getPassword())
-        );
-        Account user = accountRepository.findByEmail(data.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid username or password."));
-        String jwt = jwtService.generateToken(user);
-        String refreshToken = jwtService.generateRefreshToken(user);
+        Account account = accountRepository.findByEmail(data.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid username or password."));
 
-        return new LoginResponseDto(jwt, refreshToken);
+        if (passwordEncoder.matches(data.getPassword(), account.getPassword())) {
+            String jwt = jwtService.generateToken(account);
+            String refreshToken = jwtService.generateRefreshToken(account);
+
+            return new LoginResponseDto(jwt, refreshToken);
+        }
+        else
+            throw new IllegalArgumentException("Invalid username or password.");
     }
 }

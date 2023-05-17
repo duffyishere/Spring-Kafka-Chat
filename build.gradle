@@ -24,11 +24,16 @@ dependencies {
 
     // mariadb jdbc
     implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 
     // jwt library
     implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
     implementation 'io.jsonwebtoken:jjwt-impl:0.11.2'
     implementation 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+
+    // swagger
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
 }
 
 tasks.named('test') {
