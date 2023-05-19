@@ -1,5 +1,6 @@
-package org.duffy.springinitializr.domain.account.dto;
+package org.duffy.springinitializr.domain.auth.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

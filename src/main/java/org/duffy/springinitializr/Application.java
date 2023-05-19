@@ -12,12 +12,4 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
-
-    @GetMapping
-    @ResponseBody
-    public String index() {
-        System.out.println("test");
-        return "hello world!";
-    }
-
 }

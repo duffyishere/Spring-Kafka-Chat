@@ -5,8 +5,7 @@ It exposes a REST API performing OLTP on a relational database (MySQL or Postgre
 
 ## Features
 - JWT Authorization
-- Swagger UI documentation tool
-- CustomResponse class
+- Open API documentation tool
 - Exception Handler
 - Spring AOP
 - Spring Jpa Data, QueryDSL Default Settings
@@ -17,4 +16,4 @@ It exposes a REST API performing OLTP on a relational database (MySQL or Postgre
 ./gradlew build.gradle 
 ```
 
-Use your API client to access the resources: http://127.0.0.1:8080/
+Use your API client to access the resources: http://127.0.0.1:8080

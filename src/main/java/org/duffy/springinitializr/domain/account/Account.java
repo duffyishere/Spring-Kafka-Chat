@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.duffy.springinitializr.domain.account.dto.RegisterAccountDto;
+import org.duffy.springinitializr.domain.auth.dto.RegisterAccountDto;
 import org.duffy.springinitializr.domain.baseEntity.BaseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

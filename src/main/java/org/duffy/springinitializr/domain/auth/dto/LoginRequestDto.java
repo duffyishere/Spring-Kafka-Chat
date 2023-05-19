@@ -1,16 +1,14 @@
 package org.duffy.springinitializr.domain.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
-public class AuthenticationDto {
+public class LoginRequestDto {
 
     @NotBlank
-    private String token;
+    private String email;
 
     @NotBlank
-    private String refreshToken;
+    private String password;
 }
