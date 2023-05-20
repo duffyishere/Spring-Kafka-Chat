@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
 public class AuthenticationController {
 
@@ -28,7 +28,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(authenticationService.login(body));
     }
 
-    @Operation(summary = "Get new JWT by the Refresh token")
+    @Operation(summary = "Get updated JWT by the Refresh token")
     @PostMapping("/refresh")
     public ResponseEntity refreshToken(@RequestHeader(HttpHeaders.AUTHORIZATION) String refreshToken) {
         return ResponseEntity.ok(authenticationService.refreshToken(refreshToken));

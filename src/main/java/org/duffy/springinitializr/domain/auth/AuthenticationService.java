@@ -8,6 +8,7 @@ import org.duffy.springinitializr.domain.auth.dto.LoginResponseDto;
 import org.duffy.springinitializr.domain.auth.dto.RegisterAccountDto;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,8 +22,9 @@ public class AuthenticationService {
         accountRepository.save(new Account(data, encryptPassword));
     }
 
+    @Transactional(readOnly = true)
     public LoginResponseDto login(LoginRequestDto data) {
-        Account account = accountRepository.findByEmail(data.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid username or password."));
+        Account account = accountRepository.findByEmail(data.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid email or password."));
 
         if (passwordEncoder.matches(data.getPassword(), account.getPassword())) {
             String jwt = jwtService.generateToken(account);
@@ -31,9 +33,10 @@ public class AuthenticationService {
             return new LoginResponseDto(jwt, refreshToken);
         }
         else
-            throw new IllegalArgumentException("Invalid username or password.");
+            throw new IllegalArgumentException("Invalid email or password.");
     }
 
+    @Transactional(readOnly = true)
     public LoginResponseDto  refreshToken(String refreshToken) {
         Account account = accountRepository.findByEmail(jwtService.extractUsername(refreshToken)).orElseThrow(() -> new IllegalArgumentException("Invalid refresh token."));
         if (jwtService.isTokenValid(refreshToken, account)) {
