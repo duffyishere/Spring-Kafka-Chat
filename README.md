@@ -16,4 +16,4 @@ It exposes a REST API performing OLTP on a relational database (MySQL or Postgre
 ./gradlew build.gradle 
 ```
 
-Use your API client to access the resources: http://127.0.0.1:8080
+Open API 3 Documentation URL: http://127.0.0.1:8080/swagger-ui/index.html
