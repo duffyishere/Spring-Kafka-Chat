@@ -34,10 +34,10 @@ public class Account extends BaseEntity implements UserDetails {
     private String lastName;
 
     public Account(RegisterAccountDto data, String encryptPassword) {
-        this.email = data.getEmail();
+        this.email = data.email();
         this.password = encryptPassword;
-        this.firstName = data.getFirstName();
-        this.lastName = data.getLastName();
+        this.firstName = data.firstName();
+        this.lastName = data.lastName();
     }
 
     @Override

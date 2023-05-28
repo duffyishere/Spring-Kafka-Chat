@@ -3,12 +3,11 @@ package org.duffy.springinitializr.domain.auth.dto;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
-@Data
-public class LoginRequestDto {
+public record LoginRequestDto(
 
     @NotBlank
-    private String email;
+    String email,
 
     @NotBlank
-    private String password;
-}
+    String password
+) {}

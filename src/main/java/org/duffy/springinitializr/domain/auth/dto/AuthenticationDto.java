@@ -4,13 +4,11 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data
-@AllArgsConstructor
-public class AuthenticationDto {
+public record AuthenticationDto(
 
     @NotBlank
-    private String token;
+    String jwt,
 
     @NotBlank
-    private String refreshToken;
-}
+    String refreshToken
+) {}
