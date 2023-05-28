@@ -85,5 +85,11 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# Spring property files (Avoid ignoring default property file)
 **/*.properties
 !application.properties
+
+# DB Account info
+**/*.env
+**/db/data
