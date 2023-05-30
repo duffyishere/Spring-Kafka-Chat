@@ -92,4 +92,5 @@ gradle-app.setting
 
 # DB Account info
 **/*.env
-**/db/data
+**/data/**
+**/volume/**
