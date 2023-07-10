@@ -1,4 +1,4 @@
-package org.duffy.springinitializr.domain.auth;
+package org.duffy.spring_kafka_chat.domain.auth;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package org.duffy.springinitializr.global.exception.dto;
+package org.duffy.spring_kafka_chat.global.exception.dto;
 
 import lombok.Data;
 

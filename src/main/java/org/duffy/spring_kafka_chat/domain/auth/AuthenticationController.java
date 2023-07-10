@@ -1,9 +1,9 @@
-package org.duffy.springinitializr.domain.auth;
+package org.duffy.spring_kafka_chat.domain.auth;
 
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
-import org.duffy.springinitializr.domain.auth.dto.LoginRequestDto;
-import org.duffy.springinitializr.domain.auth.dto.RegisterAccountDto;
+import org.duffy.spring_kafka_chat.domain.auth.dto.LoginRequestDto;
+import org.duffy.spring_kafka_chat.domain.auth.dto.RegisterAccountDto;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

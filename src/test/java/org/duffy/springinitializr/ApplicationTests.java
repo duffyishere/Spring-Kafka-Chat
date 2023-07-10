@@ -1,4 +1,4 @@
-package org.duffy.springinitializr;
+package org.duffy.spring_kafka_chat;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

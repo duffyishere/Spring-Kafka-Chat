@@ -1,4 +1,4 @@
-package org.duffy.springinitializr.global.config;
+package org.duffy.spring_kafka_chat.global.config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import lombok.RequiredArgsConstructor;
-import org.duffy.springinitializr.domain.auth.JwtService;
+import org.duffy.spring_kafka_chat.domain.auth.JwtService;
 import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

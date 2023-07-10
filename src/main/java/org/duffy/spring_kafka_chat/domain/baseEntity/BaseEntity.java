@@ -1,4 +1,4 @@
-package org.duffy.springinitializr.domain.baseEntity;
+package org.duffy.spring_kafka_chat.domain.baseEntity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

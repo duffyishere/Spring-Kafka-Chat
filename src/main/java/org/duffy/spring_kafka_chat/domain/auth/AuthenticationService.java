@@ -1,11 +1,11 @@
-package org.duffy.springinitializr.domain.auth;
+package org.duffy.spring_kafka_chat.domain.auth;
 
 import lombok.RequiredArgsConstructor;
-import org.duffy.springinitializr.domain.account.Account;
-import org.duffy.springinitializr.domain.account.AccountRepository;
-import org.duffy.springinitializr.domain.auth.dto.LoginRequestDto;
-import org.duffy.springinitializr.domain.auth.dto.AuthenticationDto;
-import org.duffy.springinitializr.domain.auth.dto.RegisterAccountDto;
+import org.duffy.spring_kafka_chat.domain.account.Account;
+import org.duffy.spring_kafka_chat.domain.account.AccountRepository;
+import org.duffy.spring_kafka_chat.domain.auth.dto.LoginRequestDto;
+import org.duffy.spring_kafka_chat.domain.auth.dto.AuthenticationDto;
+import org.duffy.spring_kafka_chat.domain.auth.dto.RegisterAccountDto;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

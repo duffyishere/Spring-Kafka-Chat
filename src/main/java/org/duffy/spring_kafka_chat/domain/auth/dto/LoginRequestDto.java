@@ -1,7 +1,6 @@
-package org.duffy.springinitializr.domain.auth.dto;
+package org.duffy.spring_kafka_chat.domain.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
 
 public record LoginRequestDto(
 

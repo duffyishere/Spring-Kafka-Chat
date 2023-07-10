@@ -1,7 +1,7 @@
-package org.duffy.springinitializr.global.config;
+package org.duffy.spring_kafka_chat.global.config;
 
 import lombok.RequiredArgsConstructor;
-import org.duffy.springinitializr.domain.account.AccountRepository;
+import org.duffy.spring_kafka_chat.domain.account.AccountRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

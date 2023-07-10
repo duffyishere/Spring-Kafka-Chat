@@ -1,11 +1,11 @@
-package org.duffy.springinitializr.domain.account;
+package org.duffy.spring_kafka_chat.domain.account;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.duffy.springinitializr.domain.auth.dto.RegisterAccountDto;
-import org.duffy.springinitializr.domain.baseEntity.BaseEntity;
+import org.duffy.spring_kafka_chat.domain.auth.dto.RegisterAccountDto;
+import org.duffy.spring_kafka_chat.domain.baseEntity.BaseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

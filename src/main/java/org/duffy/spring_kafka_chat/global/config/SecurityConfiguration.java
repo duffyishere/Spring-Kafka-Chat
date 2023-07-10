@@ -1,4 +1,4 @@
-package org.duffy.springinitializr.global.config;
+package org.duffy.spring_kafka_chat.global.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package org.duffy.springinitializr.domain.account;
+package org.duffy.spring_kafka_chat.domain.account;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

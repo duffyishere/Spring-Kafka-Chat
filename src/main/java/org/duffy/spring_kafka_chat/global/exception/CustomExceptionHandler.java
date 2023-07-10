@@ -1,6 +1,6 @@
-package org.duffy.springinitializr.global.exception;
+package org.duffy.spring_kafka_chat.global.exception;
 
-import org.duffy.springinitializr.global.exception.dto.ErrorResponse;
+import org.duffy.spring_kafka_chat.global.exception.dto.ErrorResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
