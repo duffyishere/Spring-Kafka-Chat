@@ -17,7 +17,6 @@ public class ChatService {
     private final String CHAT_TOPIC = "chatting";
     public void sendMessageToTopic(String message) {
         final ProducerRecord<String, String> record = new ProducerRecord<>(CHAT_TOPIC, message);
-
         CompletableFuture<SendResult<String, String>> future = kafkaTemplate.send(record);
         future.whenComplete((result, ex) -> {
             if (ex != null) {
