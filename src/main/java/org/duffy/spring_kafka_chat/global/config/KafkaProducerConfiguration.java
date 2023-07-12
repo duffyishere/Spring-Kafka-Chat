@@ -32,7 +32,7 @@ public class KafkaProducerConfiguration {
         configurations.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         configurations.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configurations.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-//        configurations.put(ProducerConfig.ACKS_CONFIG, "1");
+        configurations.put(ProducerConfig.ACKS_CONFIG, "1");
 
         return configurations;
     }
